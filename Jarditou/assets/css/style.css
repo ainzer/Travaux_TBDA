@@ -1,19 +1,32 @@
- @media screen and (min-width: 768px) {
-        }
 head{
-font-family: Arial, Helvetica, sans-serif;
+font-family: 'new roman';
 }
 .logo {
-    height: auto;
+    height: 100px;
+    width: 100%;
+}
+header{
+    display: flex;
+}
+.picklogo{
+    width: 50%;
+    /* position: relative;
+    float: left; */
+}
+.titre{
+   
+    font-size: 28px;
+    margin: auto;
+}
+.promo{
     width: 200px;
-    
 }
 body {
-    font: size 1.1em;
-    font-family:'Times New Roman', Times, serif;
+    font: size 1.2rem;
+    font-family:'new roman';
 }
 nav {
-    font-size: 1.5em;
+    font-size: 1.2rem;
 background-color: black;
 width: 100%;
 height: auto;
@@ -25,10 +38,8 @@ padding-bottom: 1px;
     display: inline;
 }
 .image {
-    height: 250px;
-    max-width: 100%;
-    background-repeat: no-repeat;
-    background-position: 0% 100%;
-    background-size: cover;
-    -webkit-background-size: cover;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
 }
