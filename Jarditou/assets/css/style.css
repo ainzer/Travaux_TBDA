@@ -5,6 +5,7 @@ head {
 }
 .logo {
     height: 100px;
+    width: ;
 }
 body {
     font: size 1.1em;
@@ -13,7 +14,12 @@ body {
 nav {
     font-size: 1.5em;
 background-color: black;
-height: 50px;
-font-size: larger;
-
+width: 100%;
+height: auto;
+margin: 13px 0px;
+padding-top: 1px;
+padding-bottom: 1px;
+}
+.menu {
+    display: inline;
 }
