@@ -1,11 +1,12 @@
-head {
-    @media screen and (min-width: 768px) {
+ @media screen and (min-width: 768px) {
         }
-        font-family: Arial, Helvetica, sans-serif;
+head{
+font-family: Arial, Helvetica, sans-serif;
 }
 .logo {
-    height: 100px;
-    width: ;
+    height: auto;
+    width: 200px;
+    
 }
 body {
     font: size 1.1em;
@@ -22,4 +23,7 @@ padding-bottom: 1px;
 }
 .menu {
     display: inline;
+}
+.promo {
+    height: 200px;
 }
