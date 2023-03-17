@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+<head> <!--debut head-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jarditou</title>
     <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <div><img src="assets/img/jarditou_logo.jpg" alt="Logo Jarditou" class="logo">
-    <small>qualité depuis 70 ans</small></div>
-    <nav>
+</head> <!--fin head-->
+<body> <!--debut body-->
+    <header> <!--debut header-->
+        <div class="picklogo"> <!--debut div picklogo-->
+    <img class="promo" src="assets/img/jarditou_logo.jpg" alt="Logo Jarditou">
+    <div class="slagan">La qualité depuis 70 ans</div>
+        </div> <!--fin div picklogo-->
+        <div class="titre">Tout le jardin</div>
+    </header> <!--fin header-->
+    <nav> <!--debut nav-->
         <ul>
         <a href="index.html" title="Accueil" style="color: white;">Accueil</a>
         <a href="tableau.html" title="Tableau" style="color: white;">Tableau</a>
         <a href="contact.html" title="Contact" style="color: white;">Contact</a>
         </ul>
-    </nav><br>
-        <img src="assets/img/promotion.jpg" alt="Promotion" class="promo"><br>
-        <h1>Contact</h1><hr><br>
+    </nav> <!--fin nav-->
+    <br>
+        <img class="image" src="assets/img/promotion.jpg" alt="Promotion">
+        <br>
+        <h1>Contact</h1>
+        <hr>
+        <br>
         <p>* Ces zones sont obligatoires</p><br>
-        <fieldset>
+        <fieldset> <!--debut fieldset-->
             <legend>Vos coordonnées</legend>
             <Label>Votre nom* : </Label><input type="text"><br>
             <label>Votre prénom* : </label><input type="text"><br><br>
@@ -30,31 +39,37 @@
             <label>Adresse : </label><input type="text"><br>
             <label>Ville : </label><input type="text"><br>
             <label>Email* : </label><input type="text" placeholder="dave.loper@afpa.com">
-        </fieldset><br>
-        <fieldset>
+        </fieldset> <!--fin fieldset-->
+        <br>
+        <fieldset> <!--debut fieldset-->
             <legend>Votre demande</legend>
             <label>Sujet* : </label>
-            <select>
+            <select> <!--debut select-->
                 <option>Veuillez sélectionner un sujet</option>
                 <option>Mes commandes</option>
                 <option>Question sur un produit</option>
                 <option>Réclamation</option>
                 <option>Autres</option>
-            </select><br>
+            </select> <!--fin select-->
+            <br>
             <label>Votre question* : </label><textarea cols="30" rows="2"></textarea>
-        </fieldset><br>
-        <input type="checkbox">* J'accepte le traitement informatique de ce formulaire <br><br>
+        </fieldset> <!--fin fieldset-->
+        <br>
+        <input type="checkbox"><p>* J'accepte le traitement informatique de ce formulaire</p>
+        <br>
+        <br>
         <input type="submit" value="Envoyer">
-        <input type="submit" value="Annuler"><hr>
-</body>
-<footer>
-    <nav>
+        <input type="submit" value="Annuler">
+        <hr>
+</body> <!--fin body-->
+<footer> <!--debut footer-->
+    <nav> <!--debut nav-->
         <ul>
         <u style="color: white;">Mension légal</u>
         <u style="color: white;">Horaires</u>
         <u style="color: white;">Plant du site</u>
         </ul>
-    </nav>
-</body>
-</footer>
+    </nav> <!--fin nav-->
+</footer> <!--fin footer-->
+
 </html>

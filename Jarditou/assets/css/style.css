@@ -41,5 +41,22 @@ padding-bottom: 1px;
     width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
+
+.gauche {
+position: relative;
+width: 100%;
+}
+.droite {
+display: none;
+padding: 0px 10px;
+}
+}
+.droite {
+position: relative;
+padding-left: 4px;
+margin: 16px 1px;
+width: 20%;
+background-color: grey;
+border: 1px transparent;
 }
