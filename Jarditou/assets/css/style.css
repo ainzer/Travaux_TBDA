@@ -23,8 +23,7 @@ header{
     width: 200px;
 }
 body {
-    font: size 1.2rem;
-    font-family:'new roman';
+font-family:'new roman';
 }
 nav {
     font-size: 1.2rem;
@@ -51,6 +50,11 @@ width: 100%;
 .droite {
 display: none;
 padding: 0px 10px;
+}
+.menu {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
 }
 }
 .droite {
