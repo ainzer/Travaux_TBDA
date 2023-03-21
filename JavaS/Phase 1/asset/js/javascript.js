@@ -16,7 +16,7 @@ function clickbtn2(){
     alert("Vous avez cliqué sur Annuler");
     return;
     }
-
+    
     var age= parseInt(prompt("Veuillez saisir votre age"));
     if(isNaN(age)){
     alert("Vous n'avez pas saisi un age correct !\nVeuillez recommencer.");
