@@ -75,15 +75,14 @@ nav {
 .droite {
     position: relative;
     padding-left: 4px;
-    margin: 16px 1px;
     width: 35%;
     background-color: grey;
-    border: 1px transparent;
 }
 
 .gauche {
     position: relative;
     width: 65%;
+    /*background-color: aqua;*/
 }
 
 .principal {
@@ -98,4 +97,11 @@ li {
 
 .blanc {
     color: white;
+}
+.bordure{
+    border: 2px solid black;
+}
+.bordure th, .bordure td{
+    border: 1px solid black;
+    text-align: center;
 }

@@ -1,29 +1,6 @@
-body {
-font-size: 1.2rem;
-font-family: arial;
+.t1{
+    border: 2px solid black;
 }
-@media screen and ( max-width: 178px) {
-/*article { position: relative;
-width: 100%;
-}
-aside {
-display: none;
-padding: 0px 10px;    
-}*/
-}
-.principal {
-display: flex;
-max-width: 100%;
-margin: 2px 2px;
-}
-article {
-position: relative;
-width: 65%; 
-background-color: aqua;   
-}
-aside {
-position: relative;
-padding-left: 4px;
-width: 35%;
-background-color: blueviolet;
+.t2 td, .t2 th{
+    border: 1px solid orange;
 }
