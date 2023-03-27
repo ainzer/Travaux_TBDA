@@ -1,0 +1,108 @@
+body {
+    font-family: 'new roman';
+}
+
+.logo {
+    height: 100px;
+    width: 100%;
+}
+
+header {
+    display: flex;
+}
+
+.picklogo {
+    width: 50%;
+   /*  position: relative;
+    float: left; */
+}
+
+.titre {
+
+    font-size: 28px;
+    margin: auto;
+}
+
+.promo {
+    width: 200px;
+}
+
+body {
+    font-family: 'new roman';
+}
+
+nav {
+    font-size: 1.2rem;
+    background-color: black;
+    width: 100%;
+    height: auto;
+    margin: 13px 0px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.image {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .gauche {
+        position: relative;
+        width: 100%;
+    }
+
+    .droite {
+        display: none;
+        padding: 0px 10px;
+    }
+
+    li {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+
+
+}
+
+@media screen and (min-width: 768px) 
+{
+
+}
+
+.droite {
+    position: relative;
+    padding-left: 4px;
+    width: 35%;
+    background-color: grey;
+}
+
+.gauche {
+    position: relative;
+    width: 65%;
+    /*background-color: aqua;*/
+}
+
+.principal {
+    display: flex;
+    max-width: 100%;
+    margin: 2px 2px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.blanc {
+    color: white;
+}
+.bordure{
+    border: 2px solid black;
+    background-color: blue;
+}
+.bordure th, .bordure td{
+    border: 1px solid black;
+    text-align: center;
+}
