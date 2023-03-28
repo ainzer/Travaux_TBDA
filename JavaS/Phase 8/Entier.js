@@ -5,7 +5,7 @@ while (cpt < nb) {
         cpt++
         continue;
     }
-
+    
     document.write("Nombre : " + cpt + "<br>");
     cpt++;
 }
