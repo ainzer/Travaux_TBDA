@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Pierre Papier Ciseau</title>
+    <meta name="description" content="Jeu du Pierre Papier Ciseau">
+    <meta name="author" content="Tony Spicher">
+
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+
+<body>
+    <div>
+        <p style="text-align: right"><a href="index.html">Actualiser</a></p>
+        <header>
+            <div style="text-align: center">
+                <h1>Pierre Papier Ciseau</h1>
+            </div>
+        </header>
+
+        <script type="text/javascript" src="script.js"></script>
+        <noscript>Désolé, le jeu a besoin de JavaScript pour fonctionner!</noscript>
+        
+        <form>
+            <div><br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td colspan="3"><input name="text" size="15" style="text-align: center" type="text"
+                                    readonly></td>
+                        </tr>
+                        <tr>
+                            <td><input value="Pierre" onclick="res(this.form,'Pierre')" type="button"></td>
+                            <td><input value="Papier" onclick="res(this.form,'Papier')" type="button"></td>
+                            <td><input value="Ciseau" onclick="res(this.form,'Ciseau')" type="button"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><input value="Résultat..."
+                                    onclick="compute(); testing(this.form); raz(this.form)" type="button"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <div id="score" style="font-weight: bold; text-align: center">
+                    Gagné: 0 fois. Perdu: 0 fois
+                </div>
+            </div>
+        </form>
+        <br>
+        <footer>
+            <div style="text-align: center">
+                <p>Copyright &copy; 2023, Tony Spicher.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
