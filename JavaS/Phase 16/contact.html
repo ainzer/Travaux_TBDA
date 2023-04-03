@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de contact</title>
+</head>
+<body>
+    <h1>Formulaire de contact</h1>
+    <form action="traitement.php" method="post">
+    <p>
+        <label for="societe">Société :</label>
+        <input type="text" id="societe" name="societe" required minlength="1">
+    </p>
+    <p>
+        <label for="personne">Personne à contacter :</label>
+        <input type="text" id="personne" name="personne" required minlength="1">
+    </p>
+    <p>
+        <label for="adresse">Addresse :</label>
+        <input type="text" id="adresse" name="adresse">
+    </p>
+    <p>
+        <label for="codepostal">Code postal :</label>
+        <input type="text" id="codepostal" name="codepostal" required pattern="[0-9]{5}">
+    </p>
+    <p>
+        <label for="ville">Ville :</label>
+        <input type="text" id="ville" name="ville" required minlength="1">
+    </p>
+    <p>
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+    </p>
+    <p>
+        <label for="environnement">Environnement technique :</label>
+        <select name="environnement" id="environnement">
+            <option value="Choisissez" selected>Choisissez</option>
+            <option value="Access">Access</option>
+            <option value="Java">Java</option>
+            <option value="Delphi">Delphi</option>
+            <option value="Windev">Windev</option>
+            <option value="Visual Basic">Visual Basic</option>
+            <option value="Power Builder">Power Builder</option>
+            <option value="Internet">Internet</option>
+            <option value="Intranet">Intranet</option>
+            <option value="Windows NT">Windows NT</option>
+            <option value="Unix">Unix</option>
+            <option value="SQL Server">SQL Server</option>
+            <option value="Oracle">Oracle</option>
+            <option value="Autre...">Autre...</option>
+        </select>
+        <br>
+        <textarea name="environnement-texte" id="environnement-texte" cols="50" rows="4" placeholder="Veuillez préciser les techniques utilisées"></textarea>
+    </p>
+    <p>
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Effacer">
+    </p>
+</form>
+<script src="contact.js"></script>
+</body>
+</html>
