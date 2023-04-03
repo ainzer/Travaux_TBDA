@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Création de fiches de personnage</title>
+</head>
+<body>
+  <h1>Création de fiches de personnage</h1>
+  <form>
+    <fieldset>
+      <legend>Informations du joueur</legend>
+      <div>
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+      </div>
+      <div>
+        <label for="classe">Classe :</label>
+        <input type="text" id="classe" name="classe" required>
+      </div>
+      <div>
+        <label for="race">Race :</label>
+        <input type="text" id="race" name="race" required>
+      </div>
+      <div>
+        <label for="niveau">Niveau :</label>
+        <input type="number" id="niveau" name="niveau" required>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Statistiques</legend>
+      <div>
+        <label for="force">Force :</label>
+        <input type="number" id="force" name="force" required>
+      </div>
+      <div>
+        <label for="dexterite">Dextérité :</label>
+        <input type="number" id="dexterite" name="dexterite" required>
+      </div>
+      <div>
+        <label for="constitution">Constitution :</label>
+        <input type="number" id="constitution" name="constitution" required>
+      </div>
+      <div>
+        <label for="intelligence">Intelligence :</label>
+        <input type="number" id="intelligence" name="intelligence" required>
+      </div>
+      <div>
+        <label for="sagesse">Sagesse :</label>
+        <input type="number" id="sagesse" name="sagesse" required>
+      </div>
+      <div>
+        <label for="charisme">Charisme :</label>
+        <input type="number" id="charisme" name="charisme" required>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Sorts</legend>
+      <div>
+        <label for="sorts">Sorts connus :</label>
+        <textarea id="sorts" name="sorts"></textarea>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Équipement</legend>
+      <div>
+        <label for="equipement">Équipement :</label>
+        <textarea id="equipement" name="equipement"></textarea>
+      </div>
+    </fieldset>
+    <div>
+      <input type="submit" value="Créer la fiche de personnage">
+    </div>
+  </form>
+</body>
+</html>

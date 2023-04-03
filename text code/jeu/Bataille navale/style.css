@@ -1,0 +1,30 @@
+#grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 2px;
+}
+
+.cell {
+    background-color: lightblue;
+    border: 1px solid darkblue;
+    cursor: pointer;
+}
+
+.ship {
+    background-color: gray;
+}
+
+.hit {
+    background-color: red;
+}
+
+.miss {
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+#restart-button {
+    margin-top: 20px;
+    font-size: 16px;
+}

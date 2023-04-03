@@ -1,0 +1,17 @@
+.card {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0;
+  }
+  
+  .card > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+  }
