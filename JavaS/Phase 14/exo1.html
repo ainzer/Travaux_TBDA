@@ -7,9 +7,11 @@
     <title>Document</title>
 </head>
 <body>
+    <form method="POST" onsubmit="return validation()">
     <h3>Saisissez un texte puis pressez le bouton 'Controler'</h3>
-    <input type="text">
-    <button onclick="afficherInformation()">Contrôler</button>
-    <script src="exo1.js"></script>
+    <input type="text" id="text" name="text">
+    <button id="button" name="button">Contrôler</button>
+    <script src="/JavaS/Phase 14/exo1.js"></script>
+</form>
 </body>
 </html>
