@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: #3399ff;
+}
+
+input[type="text"] {
+  width: 50px;
+}
+
+input[type="button"] {
+  background-color: #3399ff;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#guessOutput {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#guessesRemaining {
+  font-style: italic;
+  margin-top: 10px;
+}

@@ -1,30 +1,35 @@
-#grid {
+#board {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    gap: 2px;
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(10, 50px);
+    margin: 0 auto;
+    width: 500px;
 }
 
-.cell {
-    background-color: lightblue;
-    border: 1px solid darkblue;
+#board div {
+    background-color: #9fc6c1;
+    border: 1px solid #000;
+    box-sizing: border-box;
     cursor: pointer;
+    font-size: 0;
+    height: 50px;
+    text-align: center;
+    width: 50px;
 }
 
-.ship {
-    background-color: gray;
+#board div.ship {
+    background-color: #5e8d93;
 }
 
-.hit {
-    background-color: red;
+#board div.hit {
+    background-color: #f00;
 }
 
-.miss {
-    background-color: white;
-    border: 1px solid lightgray;
+#board div.miss {
+    background-color: #fff;
+    border-color: #999;
 }
 
-#restart-button {
-    margin-top: 20px;
-    font-size: 16px;
+h1 {
+    text-align: center;
 }

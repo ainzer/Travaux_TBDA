@@ -1,107 +1,45 @@
-const GRID_SIZE = 10;
-const SHIP_SIZE = 3;
-const ships = [];
+var board = document.getElementById("board");
+var squares = [];
 
+var shipLocations = [[0,1,2], [25,35,45,55], [95,96,97,98,99], [19,29,39,49,59]];
+var hits = [];
+var misses = [];
 
-const grid = document.getElementById("grid");
-const restartButton = document.getElementById("restart-button");
-
-
-let numshipsSunk = 0;
-
-
-restartButton.addEventListener("click", init);
-
-
-function init() {
-    ships.length = 0;
-    numshipsSunk = 0;
-    grid.innerHTML = "";
-    createGrid();
-    createShips();
+function createBoard() {
+    for (var i = 0; i < 100; i++) {
+        var square = document.createElement("div");
+        square.setAttribute("data-index", i);
+        square.addEventListener("click", fire);
+        board.appendChild(square);
+        squares.push(square);
+    }
 }
 
-
-function createGrid() {
-    for (let row = 0; row < GRID_SIZE; row++) {
-        for (let col = 0; col < GRID_SIZE; col++) {
-            const cell = document.createElement("div");
-            cell.classList.add("cell");
-            cell.dataset.row = row;
-            cell.dataset.col = col;
-            cell.addEventListener("click", handlecellClick);
-            grid.appendChild(cell);
+function placeShips() {
+    for (var i = 0; i < shipLocations.length; i++) {
+        var ship = shipLocations[i];
+        for (var j = 0; j < ship.length; j++) {
+            squares[ship[j]].classList.add("ship");
         }
     }
 }
 
-
-function createShips() {
-    let shipCount = 0;
-    while (shipCount < 3) {
-        const orientation = Math.floor(Math.random() * 2);
-        let ship;
-        if (orientation === 0) {
-            // horizontal ship
-            const row = Math.floor(Math.random() * GRID_SIZE);
-            const col = Math.floor(Math.random() * (GRID_SIZE - SHIP_SIZE + 1));
-            ship = Array.from(
-                { length: SHIP_SIZE },
-                (_, i) => `[data-row="${row}"][data-col="${col}"]`
-            );
-        } else {
-            // vertical ship
-            const row = Math.floor(Math.random() * (GRID_SIZE - SHIP_SIZE + 1));
-            const col = Math.floor(Math.random() * GRID_SIZE);
-            ship = Array.from(
-                { length: SHIP_SIZE },
-                (_, i) => `[data-row="${row + i}"][data-col="${col}"]`
-            );
-        }
-        if (!ship.some(cell => ship.flat().include(cell))) {
-            // check that the ship doesn't overlap with an existing ship
-            ship.forEach(cell => {
-                document.querySelector(cell).classList.add("ship");
-            });
-            ships.push(ship);
-            shipCount++;
-        }
+function fire() {
+    var index = parseInt(this.getAttribute("data-index"));
+    if (hits.includes(index) || misses.includes(index)) {
+        return;
     }
-}
-
-
-function handleCellClick(event) {
-    const cell = event.target;
-    const isHit = cell.classList.contains("ship");
-    if (isHit) {
-        cell.classList.add("hit");
-        checkIfShipSunk(cell);
-        checkIfGameWon();
+    if (squares[index].classList.contains("ship")) {
+        squares[index].classList.add("hit");
+        hits.push(index);
+        if (hits.length == 10) {
+            alert("Vous avez gagné!");
+        }
     } else {
-        cell.classList.add("miss");
-    }
-    cell.removeEventListener("click", handleCellClick);
-}
-
-function checkIfShipSunk(cell) {
-    const ship = ships.find(ship => ship.includes(`[data - row ="${cell.dataset.row}"][data - col ="${cell.dataset.col}"]`));
-    const isSunk = ship.every(cell => document.querySelector(cell).classList.contains("hit"));
-    if (isSunk) {
-        numShipsSunk++;
-        ship.forEach(cell => {
-            document.querySelector(cell).classList.add("sunk");
-            document.querySelector(cell).removeEventListener("click", handleCellClick);
-        });
+        squares[index].classList.add("miss");
+        misses.push(index);
     }
 }
 
-function checkIfGameWon() {
-    if (numShipsSunk === 3) {
-        alert("Félicitations ! Vous avez gagné !");
-        grid.querySelectorAll(".cell").forEach(cell => {
-            cell.removeEventListener("click", handleCellClick);
-        });
-    }
-}
-
-init();
+createBoard();
+placeShips();
