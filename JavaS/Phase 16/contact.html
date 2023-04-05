@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Formulaire de contact</h1>
-    <form action="traitement.php" method="post">
+    <form action="traitement.php" method="post" onsubmit="">
     <p>
         <label for="societe">Société :</label>
         <input type="text" id="societe" name="societe" required minlength="1">
@@ -53,16 +53,16 @@
             <option value="Unix">Unix</option>
             <option value="SQL Server">SQL Server</option>
             <option value="Oracle">Oracle</option>
-            <option value="Autre...">Autre...</option>
+            <option value="">Autre...</option>
         </select>
         <br>
-        <textarea name="environnement-texte" id="environnement-texte" cols="50" rows="4" placeholder="Veuillez préciser les techniques utilisées"></textarea>
+        <textarea name="environnement-texte" id="environnement-texte" cols="40" rows="3" placeholder="Veuillez préciser les techniques utilisées"></textarea>
     </p>
     <p>
         <input type="submit" value="Envoyer">
         <input type="reset" value="Effacer">
     </p>
 </form>
-<script src="contact.js"></script>
+<script src="/JavaS/Phase 16/contact.js"></script>
 </body>
 </html>

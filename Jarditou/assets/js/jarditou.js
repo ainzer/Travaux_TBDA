@@ -1,18 +1,31 @@
-const form = document.querySelector('form');
-form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Empêche l'envoi du formulaire
-
-
-    // Vérifie le champ Nom
-    const nom = document.getElementById('Nom');
-    const nomValue = nom.value.trim();
-    if (nomValue === '') {
-        const error = document.createElement('p');
-        error.textContent = 'Veuillez saisir votre nom.';
-        nom.insertAdjacentElement('afterend', error);
+let form = document.querySelector("form");
+form.addEventListener("submit", function (event) {
+    let emailInput = document.getElementById("email");
+    let email = emailInput.value;
+    if (!email.includes("@")) {
+        alert("L'adresse email doit comporter au moins le caractère '@'.");
+        event.preventDefault();
+        emailInput.focus();
         return;
     }
+    
 
-    // Envoie le formulaire si tout est valide
-    form.submit();
+    let sujetSelect = document.getElementById("Sujet");
+    let sujetTexte = document.getElementById("sujet-texte");
+    if (sujetSelect.value == "Sujet") {
+        alert("Veuiller sélectionner une option pour le sujet.");
+        event.preventDefault();
+        sujetSelect.focus();
+        return;
+    }
+    if (sujetSelect.value != "autre") {
+        sujetTexte.value = sujetSelect.value;
+    } else {
+        if (sujetTexte.value == "Sujet" || sujetTexte.value == "") {
+            alert("Veuiller préciser votre question.");
+            event.preventDefault();
+            sujetTexte.focus();
+            return;
+        }
+    }
 });

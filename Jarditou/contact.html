@@ -55,18 +55,20 @@
         <hr>
 
         <br>
-        
+        <form action="traitement.php" method="post">
         <p>* Ces zones sont obligatoires</p><br>
 
         <fieldset> <!--debut fieldset-->
 
             <legend>Vos coordonnées</legend>
 
-            <Label>Votre nom* : </Label><input type="text" title="Nom" id="Nom">
+            <Label for="Nom">Votre nom* : </Label>
+            <input type="text" title="Nom" id="Nom" name="Nom" required minlength="1">
 
             <br>
 
-            <label>Votre prénom* : </label><input type="text" title="Prenom" id="Prenon">
+            <label for="Prenom">Votre prénom* : </label>
+            <input type="text" title="Prenom" id="Prenon" name="Prenom" required minlength="1">
 
             <br>
 
@@ -93,7 +95,8 @@
 
             <br>
 
-            <label>Email* : </label><input type="text" placeholder="dave.loper@afpa.com" title="Email">
+            <label for="email">Email* : </label>
+            <input type="email" id="email" name="email" placeholder="dave.loper@afpa.com" title="Email" required>
 
         </fieldset> <!--fin fieldset-->
 
@@ -105,29 +108,30 @@
 
             <label>Sujet* : </label>
 
-            <select> <!--debut select-->
+            <select name="sujet" id="sujet"> <!--debut select-->
 
-                <option>Veuillez sélectionner un sujet</option>
+                <option value="toto" selected>Veuillez sélectionner un sujet</option>
 
-                <option>Mes commandes</option>
+                <option value="commande">Mes commandes</option>
 
-                <option>Question sur un produit</option>
+                <option value="question">Question sur un produit</option>
 
-                <option>Réclamation</option>
+                <option value="réclamation">Réclamation</option>
 
-                <option>Autres</option>
+                <option value="autre">Autres</option>
 
             </select> <!--fin select-->
 
             <br>
 
-            <label>Votre question* : </label><textarea cols="30" rows="2"></textarea>
+            <label>Votre question* : </label>
+            <textarea name="sujet-texte" id="sujet-texte" cols="30" rows="2" placeholder="Veuillez préciser votre question ?"></textarea>
 
         </fieldset> <!--fin fieldset-->
 
         <br>
 
-        <input type="checkbox"><p>* J'accepte le traitement informatique de ce formulaire</p>
+        <p></p><input type="checkbox"> * J'accepte le traitement informatique de ce formulaire</p>
 
         <br>
 
@@ -135,10 +139,10 @@
 
         <input type="submit" value="Envoyer">
 
-        <input type="submit" value="Annuler">
-
-        <hr>
+        <input type="reset" value="Annuler">
         
+        <hr>
+        </form>
     </div> <!--fin div gauche-->
 
     <div class="droite"> <!--debut div droite-->

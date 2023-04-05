@@ -9,7 +9,7 @@ form.addEventListener("submit", function (event) {
         codePostalInput.focus();
         return;
     }
-
+    
     let emailInput = document.getElementById("email");
     let email = emailInput.value;
     if (!email.includes("@")) {
