@@ -1,0 +1,33 @@
+#bingo-board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+#bingo-board div {
+    border: 1px solid black;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+}
+
+#bingo-board div.selected {
+    background-color: #ccc;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2d4373;
+}

@@ -1,0 +1,47 @@
+body {
+    font-family: sans-serif;
+}
+
+.form {
+    margin: 20px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form select {
+    margin-bottom: 10px;
+}
+
+.input-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-fields > div {
+    flex: 1 0 45%;
+    margin-right: 5%;
+}
+
+.input-fields > div:last-child {
+    margin-right: 0;
+}
+
+.input-fields label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-fields input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#result {
+    margin-top: 20px;
+}

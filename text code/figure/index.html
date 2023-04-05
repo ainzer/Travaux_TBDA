@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul d'aire de figures géométriques</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calcul d'aire de figures géométriques</h1>
+
+    <div class="form">
+        <label for="shape-select">Choisissez une forme:</label>
+        <select id="shape-select">
+            <option value="square">Carré</option>
+            <option value="rectangle">Rectangle</option>
+            <option value="triangle">Triangle</option>
+            <option value="circle">Cercle</option>
+        </select>
+
+        <div class="input-fields">
+            <div id="side-a">
+                <label for="side-a-input">Longueur du côté a:</label>
+                <input type="number" id="side-a-input">
+            </div>
+
+            <div id="side-b">
+                <label for="side-b-input">Longueur du côté b:</label>
+                <input type="number" id="side-b-input">
+            </div>
+
+            <div id="height">
+                <label for="height-input">Hauteur:</label>
+                <input type="number" id="height-input">
+            </div>
+
+            <div id="radius">
+                <label for="radius-input">Rayon:</label>
+                <input type="number" id="radius-input">
+            </div>
+        </div>
+        
+        <button id="calculate-button">Calculer l'aire</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
