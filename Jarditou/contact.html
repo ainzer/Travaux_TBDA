@@ -172,3 +172,199 @@
 </body> <!--fin body-->
 
 </html>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head><!--début de l'entête ajout de bootsraps-->
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+  <title>Jarditou Contact</title><!--Titre de la page-->
+  <script>alert("Bienvenue à la page de contact");</script>
+</head><!--Fin de l'entête-->
+
+<body><!--Début du Body-->
+
+  <header><!--début du header-->
+    <div class="logo"> <!--Début de div classe logo-->
+      <div class="piclo
+      * Ces zones sont obligatoires
+      Vos coordonées
+      Votre nom* :
+      Votre prénom* :
+      Sexe*: Masculin Féminin
+      Date de naissance*: go"><!--début de div classe piclogo-->
+        <a href="index.html"><img class="promo" src="assets/img/jarditou_logo.jpg" alt="logo" title="logo"></a>
+        <small>La qualité depuis 70 ans</small>
+      </div><!--fin de div piglogo-->
+
+      <div class="titre">Tout le jardin</div><!--Début et fin du div logo-->
+
+    </div><!--fin de div Logo-->
+
+    <nav>
+      <ul class="menu"><!--début de la balise ul-->
+        <li><a href="index.html" class="couleurmenu">Acceuil</a></li>
+        <li><a href="tableau.html" class="couleurmenu">Tableau</a></li>
+        <li><a href="contact.html" class="couleurmenu">Contact</a></li>
+      </ul>
+    </nav>
+
+
+    <img src="assets/img/promotion.jpg" class="image" alt="toto"><!--Image promotion.jpg -->
+
+
+  </header><!--Fin du header-->
+  <div class="position"> <!--Début de div position-->
+    <div class="gauche"><!--début de div gauche-->
+      <h1><b>Contact</b></h1> <!--Début du formulaire de contact-->
+      <p><i><small>* Ces zones sont obligatoires</small></i></p>
+      <form method="post" action="formulaire.php" onsubmit="return validerFormulaire();"
+        oninvalid="alert('Veuillez sélectionner votre sexe.')">
+
+
+        <small>Vos coordonées</small>
+        <div>
+          <label for="name">Votre nom* :</label>
+          <input type="text" id="nom" name="nom">
+        </div>
+        <div>
+          <label for="name">Votre prénom* :</label>
+          <input type="text" id="prenom" name="prenom">
+        </div>
+        <div>
+          <label for="sexe">Sexe*:</label>
+          <input type="radio" id="masculin" name="sexe" value="masculin" required>
+          <label for="Masculin"> Masculin </label>
+          <input type="radio" id="feminin" name="sexe" value="feminin">
+          <label for="Feminin">Féminin</label>
+        </div>
+        <div>
+          <label for="date">Date de naissance*:</label>
+          <input type="date" id="date" name="date">
+        </div>
+        <div>
+          <label for="codepostal">Code postal*:</label>
+          <input type="text" id="codepostal" name="codepostal">
+        </div>
+        <div>
+          <label for="adresse">Adresse:*</label>
+          <input type="text" id="adresse" name="adresse">
+        </div>
+        <div>
+          <label for="ville">Ville:*</label>
+          <input type="text" id="ville" name="ville">
+        </div>
+        <div>
+          <label for="email">Email*:</label>
+          <input type="text" id="email" placeholder="totodutoto@mail.fr" name="email">
+        </div>
+        <fieldset>
+          <small>Votre demande</small>
+          <label for="couleur">Sujet*</label>
+          <select id="couleur">
+            <option value="Veuillez sélectioner un sujet" selected>Veuillez sélectionner un sujet</option>
+            <option value="Commande">Mes commandes</option>
+            <option value="Qproduit">Question sur un produit</option>
+            <option value="Reclamation">Réclamation</option>
+            <option value="Autre">Autres</option>
+          </select>
+          <p></p>
+          <div>
+            <label for="Question">Votre question :</label>
+            <textarea id="question" name="question"></textarea>
+          </div>
+          <p></p>
+        </fieldset>
+
+
+        <p><input type="checkbox" required>
+          * J'accepte le traitement informatique de ce formulaire</p>
+        <input type="submit" value="Envoyer">
+        <button type="button" onclick="resetForm()">Effacer</button>
+    </div><!--fin de div gauche-->
+    </form>
+    <div class="droite"><!--Début de Div droite-->
+      <aside><!-- début de la balise aside -->
+        <h2>Colonne de Droite</h2>
+        <p>.</p>
+        <h2>.</h2>
+        <p>.</p>
+        <h2>.</h2>
+        <p>.</p>
+      </aside><!-- fin de la balise aside -->
+    </div><!--fin de div droite-->
+
+  </div><!--fin de la div position-->
+
+
+  <footer class="pied"> <!--début de la balise du footer-->
+    <nav>
+      <ul class="menu"> <!--début de ul menu-->
+        <li><a href="Menleg.html" class="couleurmenu">Mentions légales</a></li>
+        <li><a href="Horaires.html" class="couleurmenu">Horaires</a></li>
+        <li><a href="Plansite.html" class="couleurmenu">Plan du site</a></li>
+      </ul><!--fin de ul menu-->
+    </nav>
+  </footer><!--fin de la balise du footer-->
+  <script>
+    function validerFormulaire() {
+      const nom = document.getElementById("nom").value;
+      const prenom = document.getElementById("prenom").value;
+      const masculinRadio = document.getElementById("masculin").value;
+      const femininRadio = document.getElementById("feminin").value;
+      const date = document.getElementById("date").value;
+      const codepostal = document.getElementById("codepostal").value;
+      const adresse = document.getElementById("adresse").value;
+      const ville = document.getElementById("ville").value;
+      const email = document.getElementById("email").value;
+      var regexEmail = /\S+@\S+\.\S+/;
+      masculinRadio.required = true;
+      femininRadio.required = false;
+
+      if (nom.length < 1) {
+        alert("Veuillez marquer votre nom de famille (obligatoire!)");
+        return false;
+      }
+
+      if (prenom.length < 1) {
+        alert("Veuillez marquer votre prénom (obligatoire!)");
+        return false;
+      }
+
+      if (date.length == false) {
+        alert("Veuillez entrer votre année de naissance (obligatoire!)");
+        return false;
+      }
+
+      if (codepostal.length != 5) {
+        alert("Veuillez marquer votre code postale ! il ne doit y avoir que 5 caractère (obligatoire!)");
+        return false;
+      }
+
+      if (adresse.length < 1) {
+        alert("Veuillez marquer votre adresse (obligatoire!)");
+        return false;
+      }
+
+      if (ville.length < 1) {
+        alert("Veuillez marquer votre ville (obligatoire!)");
+        return false;
+      }
+
+      if (!regexEmail.test(email)) {
+        alert("L'e-mail doit comporter au moins le caractère @. (obligatoire!)");
+        return false;
+      }
+      return true;
+    }
+    const form = document.querySelector('form');
+    function resetForm() {
+      form.reset();
+    }
+  </script>
+
+</body>
+
+</html>

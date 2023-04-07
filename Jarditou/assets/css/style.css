@@ -1,108 +1,237 @@
 body {
+    /* taille de la police */
+    font-size: 1.1rem;
+    /* police de caractére */
     font-family: 'new roman';
-}
-
-.logo {
+ }
+ 
+ /* css pour mobile */
+ @media screen and (min-width: 768px) {
+ 
+    /* div post sur pc */
+    .gauche {
+ 
+       position: relative;
+       max-width: 100%;
+       width: 80%;
+    }
+ 
+    /* menu sur pc */
+    .menupc li {
+       display: inline;
+       list-style: none;
+ 
+    }
+ 
+    .image {
+       height: 250px;
+       max-width: 100%;
+       width: 100%;
+       /* ne pas répéter l'image */
+       background-repeat: no-repeat;
+       /*position de l'image*/
+       background-position: 0% 100%;
+       /*URL de l'image promo
+     background-image: url('/Jarditou/ASSETS/img/promotion.jpg');*/
+       /* couvre la taille en largeur */
+ 
+       background-size: cover;
+       -webkit-background-size: cover;
+    }
+ 
+ }
+ 
+ /* css pour pc */
+ @media screen and (max-width: 768px) {
+ 
+    /* on masque le menupc sur mobile */
+    .menu {
+       display: flex;
+       flex-direction: column;
+       text-align: center;
+    }
+ 
+    .menupc li {
+       display: block;
+ 
+    }
+ 
+    .menuphone {
+       display: inline;
+       list-style: none;
+    }
+ 
+    .menuphone ul {
+       display: none;
+    }
+ 
+    .sidebar {
+       display: none;
+    }
+ 
+    body {
+       /* taille de la police général */
+       font-size: 1.2rem;
+       /* police de caractére */
+       font-family: 'new roman';
+    }
+ 
+    .gauche {
+ 
+       position: relative;
+       width: 100%;
+    }
+ 
+    .droite {
+       /* colonne de droite */
+       display: none;
+       padding: 0px 10px;
+ 
+    }
+ }
+ 
+ a {
+    /* couleur par défaut des liens */
+    color: white;
+ }
+ 
+ .droite {
+    /* colonne de droite */
+    position: relative;
+    padding-left: 4px;
+    /*margin: 16px 1px;*/
+    width: 20%;
+    background-color: grey;
+    border: 1px transparent;
+ 
+ }
+ 
+ .droite h2 {
+    /*h2 de droite*/
+ 
+    font-size: 22px;
+ }
+ 
+ .droite aside {
+    padding: 11px 11px;
+ }
+ 
+ a {
+    /* couleur par défaut des liens */
+    color: white;
+ 
+ }
+ 
+ /* logo */
+ 
+ .logo {
+    /*image logo en haut */
     height: 100px;
+    /*hauteur*/
     width: 100%;
-}
-
-header {
-    display: flex;
-}
-
-.picklogo {
+    /*largeur*/
+ }
+ 
+ /*div image du logo */
+ .piclogo {
     width: 50%;
-   /*  position: relative;
-    float: left; */
-}
-
-.titre {
-
+    position: relative;
+    float: left;
+ }
+ 
+ /* div titre site */
+ .titre {
+    width: 50%;
+    /*largeur*/
+    position: relative;
+    padding-top: 14px;
     font-size: 28px;
-    margin: auto;
-}
-
-.promo {
+    /*taille police*/
+    margin-left: 40%;
+    /*marge sur la gauche de 40%*/
+ }
+ 
+ /* div image promotion largeur */
+ .promo {
+    /*promo*/
     width: 200px;
-}
-
-body {
-    font-family: 'new roman';
-}
-
-nav {
-    font-size: 1.2rem;
+    /*largeur*/
+ }
+ 
+ nav {
+    /* couleur arriére plan de nav */
     background-color: black;
     width: 100%;
     height: auto;
     margin: 13px 0px;
     padding-top: 1px;
     padding-bottom: 1px;
-}
-
-.image {
-    width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-
-    .gauche {
-        position: relative;
-        width: 100%;
-    }
-
-    .droite {
-        display: none;
-        padding: 0px 10px;
-    }
-
-    li {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        
-    }
-
-
-}
-
-@media screen and (min-width: 768px) 
-{
-
-}
-
-.droite {
-    position: relative;
-    padding-left: 4px;
-    width: 35%;
-    background-color: grey;
-}
-
-.gauche {
-    position: relative;
-    width: 65%;
-    /*background-color: aqua;*/
-}
-
-.principal {
+ }
+ 
+ /* nav au survole */
+ nav a:hover {
+    color: rgb(241, 9, 9);
+ }
+ 
+ a {
+    /* couleur par défaut des liens */
+    color: white;
+ 
+ }
+ 
+ /* couleur des liens au survole */
+ a:hover {
+ 
+    color: rgb(241, 9, 9);
+ }
+ 
+ /* a:visited {
+    couleur des liens déjà visité 
+    color: grey;
+ }*/
+ 
+ /* largeur maximum des images  */
+ img {
+    max-width: 100%;
+    height: auto;
+ }
+ 
+ .position {
     display: flex;
     max-width: 100%;
     margin: 2px 2px;
-}
-
-li {
-    list-style-type: none;
-}
-
-.blanc {
-    color: white;
-}
-.bordure{
-    border: 2px solid black;
-    background-color: blue;
-}
-.bordure th, .bordure td{
-    border: 1px solid black;
+ }
+ 
+ .menu li {
+    display: inline;
+    list-style: none;
+    color:white;
+ }
+ 
+ td img
+ {
+    height: 100px;
+    width: 50px;
+    width: auto;
+    
+ }
+ /* épaisseur couleur des bordures du tableau */
+ table,
+ tr,
+ td,
+ th {
+    border: 1px solid #000000;
     text-align: center;
-}
+ }
+ 
+ .imgtd {
+    width: 100px;
+ }
+ .couleurmenu{
+    color:white;
+ }
+ table
+ {
+    background: red;
+    margin: auto;
+ }
