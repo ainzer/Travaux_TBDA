@@ -1,167 +1,105 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head> <!--debut head-->
+<head><!--début de l'entête ajout de bootsraps-->
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Jarditou Tableau</title><!--Titre de la page-->
+</head><!--Fin de l'entête-->
 
-    <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jarditou</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+<body>
+  <header><!--début du header-->
+    <div class="logo"> <!--Début de div classe logo-->
+      <div class="piclogo"><!--début de div classe piclogo-->
+        <a href="index.html"><img class="promo" src="assets/img/jarditou_logo.jpg" alt="logo" title="logo"></a>
+        <small>La qualité depuis 70 ans</small>
+      </div><!--fin de div piglogo-->
 
-</head> <!--fin head-->
+      <div class="titre">Tout le jardin</div><!--Début et fin du div logo-->
 
-<body> <!--debut body-->
-    
-    <header> <!--debut header-->
+    </div><!--fin de div Logo-->
 
-        <div class="picklogo"> <!--debut div picklogo-->
+    <nav>
+      <ul class="menu"><!--début de la balise ul-->
+        <li><a href="index.html"class="couleurmenu ">Acceuil</a></li>
+        <li><a href="tableau.html"class="couleurmenu ">Tableau</a></li>
+        <li><a href="contact.html" class="couleurmenu" >Contact</a></li>
+      </ul>
+    </nav>
 
-    <img class="promo" src="assets/img/jarditou_logo.jpg" alt="Logo Jarditou">
-    <div class="slogan">La qualité depuis 70 ans</div>
 
-        </div> <!--fin div picklogo-->
+    <img src="assets/img/promotion.jpg" class="image" alt="toto"> <!--Image promotion.jpg -->
 
-        <div class="titre">Tout le jardin</div>
 
-    </header> <!--fin header-->
-    
-    <nav> <!--debut nav-->
-
-        <ul class="menu"> 
-            
-        <li><a href="index.html" title="Accueil" class="blanc">Accueil</a>
-        <a href="tableau.html" title="Tableau" class="blanc">Tableau</a>
-        <a href="contact.html" title="Contact" class="blanc">Contact</a></li>
-
-        </ul>
-
-    </nav> <!--fin nav-->
-
-    <br>
-    
-        <img class="image" src="assets/img/promotion.jpg" alt="Promotion">
-
-        <br>
-
-        <div class="principal"> <!--debut div principal-->
-
-            <div class="gauche"> <!--debut div gauche-->
-
-            <h1>Tableau</h1>
-
-        <hr>
-        
-        <br>
-
-        <table class="bordure">
-
-            <thead>
-
-            <tr>
-
-                <th>Photo</th>
-                <th>ID</th>
-                <th>Catégorie</th>
-                <th>Libellé</th>
-                <th>Prix</th>
-                <th>Couleur</th>
-
-            </tr>
-            
-            </thead>
-
-            <tbody>
-
-            <tr>
-
-                <td><img src="assets/img/7.jpg" alt="Barbecues Aramis" height="100"></td>
-                <td>7</td>
-                <td>Barbecues</td>
-                <td>Aramis</td>
-                <td>110.00€</td>
-                <td>Brun</td>
-
-            </tr>
-
-            <tr>
-
-                <td><img src="assets/img/8.jpg" alt="Barbecues Athos" height="100"></td>
-                <td>8</td>
-                <td>Barbecues</td>
-                <td>Athos</td>
-                <td>249.99€</td>
-                <td>Noir</td>
-
-            </tr>
-
-            <tr>
-
-                <td><img src="assets/img/11.jpg" alt="Barbecues Clatronic" height="100"></td>
-                <td>11</td>
-                <td>Barbecues</td>
-                <td>Clatronic</td>
-                <td>135.90€</td>
-                <td>Chrome</td>
-
-            </tr>
-
-            <tr>
-
-                <td><img src="assets/img/12.jpg" alt="Barbecues Camping" height="100"></td>
-                <td>12</td>
-                <td>Barbecues</td>
-                <td>Camping</td>
-                <td>88.00€</td>
-                <td>Noir</td>
-
-            </tr>
-
-            <tr>
-
-                <td><img src="assets/img/13.jpg" alt="Brouette Green" height="60"></td>
-                <td>13</td>
-                <td>Brouette</td>
-                <td>Green</td>
-                <td>49.00€</td>
-                <td>Verte</td>
-
-            </tr>
-        
-        </tbody>
-
-        </table>
-
-        <br>
-
-        <hr>
-
-            </div> <!--fin div gauche-->
-
-        <div class="droite"> <!--debut div droite-->
-
-        </div> <!--fin div droite-->
-
-            </div> <!--fin div principal-->
-
-<footer> <!--debut footer-->
-
-    <nav> <!--debut nav-->
-
-    <ul class="menu">
-
-        <li><u class="blanc">Mension légales</u>
-        <u class="blanc">Horaires</u>
-        <u class="blanc">Plan du site</u></li>
-
-    </ul>
-
-    </nav> <!--fin nav-->
-
-</footer> <!--fin footer-->
-
-</body> <!--fin body-->
+  </header><!--Fin du header-->
+  <h2><b>Tableau</b></h2><!--Début du tableau des article avec image/ID/Libellé/Prix/couleur-->
+  <hr>
+  <table>
+    <thead>
+      <tr>
+        <th><b><small>Photo</small></b></th>
+        <th><b><small>ID</small></b></th>
+        <th><b><small>Catégorie</small></b></th>
+        <th><b><small>Libellé</small></b></th>
+        <th><b><small>Prix</small></b></th>
+        <th><b><small>Couleur</small></b></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img src="assets/img/7.jpg" alt="toto"></td>
+        <td><small>7</small></td>
+        <td><small>Barbecues</small></td>
+        <td><small>Aramis</small></td>
+        <td><small>110.00€</small></td>
+        <td><small>Brun</small></td>
+      </tr>
+      <tr>
+        <td><img src="assets/img/8.jpg"  alt="toto"></td>
+        <td><small>8</small></td>
+        <td><small>Barbecues</small></td>
+        <td><small>Athos</small></td>
+        <td><small>249.99€</small></td>
+        <td><small>Noir</small></td>
+      </tr>
+      <tr>
+        <td><img src="assets/img/11.jpg" alt="toto"></td>
+        <td><small>11</small></td>
+        <td><small>Barbecues</small></td>
+        <td><small>Clatronic</small></td>
+        <td><small>135.90€</small></td>
+        <td><small>Chrome</small></td>
+      </tr>
+      <tr>
+        <td><img src="assets/img/12.jpg" alt="toto"></td>
+        <td><small>12</small></td>
+        <td><small>Barbecues</small></td>
+        <td><small>Camping</small></td>
+        <td><small>88.00€</small></td>
+        <td><small>Noir</small></td>
+      </tr>
+      <tr>
+        <td><img src="assets/img/13.jpg" alt="toto"></td>
+        <td><small>13</small></td>
+        <td><small>Brouette</small></td>
+        <td><small>Green</small></td>
+        <td><small>49.00€</small></td>
+        <td><small>Verte</small></td>
+      </tr>
+    </tbody>
+  </table> <!--fin du tableau-->
+  <hr>
+  <footer class="pied"> <!--début de la balise du footer-->
+    <nav>
+      <ul class="menu"> <!--début de ul menu-->style="color:white
+        <li><a href="Menleg.html" class="couleurmenu">Mentions légales</a></li>
+        <li><a href="Horaires.html" class="couleurmenu">Horaires</a></li>
+        <li><a href="Plansite.html" class="couleurmenu">Plan du site</a></li>
+      </ul><!--fin de ul menu-->
+    </nav>
+  </footer><!--fin de la balise du footer-->
+</body>
 
 </html>
