@@ -1,0 +1,30 @@
+#game-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+#player-stats {
+    display: inline-block;
+    text-align: left;
+}
+
+#enemy-stats {
+    display: inline-block;
+    text-align: right;
+}
+
+#attack-button {
+    margin-top: 50px;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+#attack-button:hover {
+    background-color: darkblue;
+}
