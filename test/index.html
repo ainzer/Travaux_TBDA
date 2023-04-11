@@ -1,26 +1,35 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Pokedex</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#">Accueil</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropbtn">Produits</a>
-        <div class="dropdown-content">
-          <a href="produit1.html">Produit 1</a>
-          <a href="produit2.html">Produit 2</a>
-          <a href="produit3.html">Produit 3</a>
-        </div>
-      </li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-  
+  <div class="container">
+    <div class="header">
+      <h1>Pokedex</h1>
+    </div>
+    <div class="pokemon-container">
+      <div class="pokemon">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Bulbasaur">
+        <h2>Bulbasaur</h2>
+        <p>#001</p>
+      </div>
+      <div class="pokemon">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="Charmander">
+        <h2>Charmander</h2>
+        <p>#004</p>
+      </div>
+      <div class="pokemon">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="Squirtle">
+        <h2>Squirtle</h2>
+        <p>#007</p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
