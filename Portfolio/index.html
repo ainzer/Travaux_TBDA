@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
             <i class="fa fa-bars"></i>
         </div>
         <div class="logo">
-            <a href="#" class="logo"><img src="" alt=""><span>Spicher Tony</span></a>
+            <a href="#" class="logo"><img src="image/logo.png" alt="" id="logo"><span>Tony</span></a>
         </div>
         <nav>
             <ul>
@@ -22,6 +22,7 @@
               <li><a href="#">ABOUT</a></li>
               <li><a href="#">SERVICES</a></li>
               <li><a href="#">PORTFOLIO</a></li>
+              <li><a href="#">CONTACT</a></li>
               <li><a href="#">BLOG</a></li>
             </ul>
         </nav>
@@ -30,32 +31,20 @@
     <div class="content">
         <div class="container">
             <div class="heading">
-                <h1></h1>
-                <h2></h2>
-                <h4></h4>
-                <p></p>
-                <button class="btn"> HIRE ME <span><i class="fa fa-arrow-right"></i></span></button>
+                <h1>Hello,</h1>
+                <h2>I'M Ronald.</h2>
+                <h4>UI/UX Designer</h4>
+                <p>Must explain to how all this idea debouncing pleasure pain the system and expound the actua.</p>
+                <button class="btn">HIRE ME <span><i class="fa fa-arrow-right"></i></span></button>
             </div>
-            <div class="headering">
-                <img src="Assets/img/kirito.jpg" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+            <div class="headerimg">
+                <img src="image/kirito.jpg" alt="">
+                <img src="image/logo.png" alt="">
+                <img src="image/logo.png" alt="">
+                <img src="image/logo.png" alt="">
             </div>
         </div>
     </div>
-    <script>
-        let menu = document.querySelector(".fa-bars");
-        let nav = document.querySelector("nav");
-        menu.addEventListener("click", function() {
-            menu.classList.toggle("fa-xmark");
-            nav.classList.toggle("active");
-        })
-        window.addEventListener("scroll", function() {
-            var navbar = document.querySelector(".navbar");
-            navbar.classList.toggle("sticky", window.scrollY > 0);
-        })
-    </script>
 </body>
 
 </html>
