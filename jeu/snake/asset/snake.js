@@ -1,7 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const board = document.getElementById('game-board');
+    const scoreContainer = document.createElement('div'); // Nouvel élément pour afficher le score
+    scoreContainer.className = 'score';
+    document.body.appendChild(scoreContainer);
+
     let snake = [{ x: 0, y: 0 }];
     let food = generateFoodPosition();
+    let score = 0; // Initialise le score à zéro
 
     function generateFoodPosition() {
         const x = Math.floor(Math.random() * 10) * 30;
@@ -25,11 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
         foodElement.style.left = `${food.x}px`;
         foodElement.style.top = `${food.y}px`;
         board.appendChild(foodElement);
+
+        // Met à jour le score affiché
+        scoreContainer.textContent = `Score: ${score}`;
     }
 
     function move() {
-        // Logique de déplacement du serpent ici
-        const head = { ...snake[0] }; // Crée une copie de la tête du serpent
+        const head = { ...snake[0] };
 
         switch (direction) {
             case 'UP':
@@ -45,28 +52,53 @@ document.addEventListener('DOMContentLoaded', () => {
                 head.x += 30;
                 break;
         }
-    
-        snake.unshift(head); // Ajoute la nouvelle tête au début du tableau
-    
-        // Vérifie si le serpent a mangé de la nourriture
+
+        if (head.x < 0 || head.x >= 1400 || head.y < 0 || head.y >= 900) {
+            alert('Game Over - Collision avec les bords!');
+            resetGame();
+            return;
+        }
+
+        if (checkCollisionWithBody(head)) {
+            alert('Game Over - Collision avec le corps!');
+            resetGame();
+            return;
+        }
+
+        snake.unshift(head);
+
         if (head.x === food.x && head.y === food.y) {
             food = generateFoodPosition();
+            score += 10; // Incrémente le score lorsque le serpent mange de la nourriture
         } else {
-            snake.pop(); // Retire la dernière partie du serpent (la queue) si aucune nourriture n'a été mangée
+            snake.pop();
         }
     }
-    let direction = 'RIGHT'; // Direction par défaut
 
+    function checkCollisionWithBody(head) {
+        for (let i = 1; i < snake.length; i++) {
+            if (head.x === snake[i].x && head.y === snake[i].y) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function resetGame() {
+        snake = [{ x: 0, y: 0 }];
+        food = generateFoodPosition();
+        score = 0; // Remet le score à zéro
+    }
+
+    let direction = 'RIGHT';
 
     function gameLoop() {
-        // Boucle principale du jeu ici
         move();
         render();
-        setTimeout(gameLoop, 200); // Appelle la boucle principale toutes les 200 millisecondes
+        setTimeout(gameLoop, 200);
     }
 
     document.addEventListener('keydown', (e) => {
-        // Gestion des touches de direction ici
         switch (e.key) {
             case 'ArrowUp':
                 direction = 'UP';

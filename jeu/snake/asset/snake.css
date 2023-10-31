@@ -1,16 +1,19 @@
 #game-board {
-    width: 300px;
-    height: 300px;
-    border: 1px solid #000;
+    width: 1400px;
+    height: 900px;
+    border: 1px solid black;
     position: relative;
 }
-
 .snake {
     position: absolute;
-    background-color: #00f;
+    background-color: blue;
+    width: 30px;
+    height: 30px;
 }
 
 .food {
     position: absolute;
-    background-color: #f00;
+    background-color: red;
+    width: 30px;
+    height: 30px;
 }
