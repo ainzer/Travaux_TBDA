@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (head.x < 0 || head.x >= 1400 || head.y < 0 || head.y >= 900) {
-           /*  alert('Game Over - Collision avec les bords!'); */
+            alert('Game Over - Collision avec les bords!');
             resetGame();
             return;
         }
